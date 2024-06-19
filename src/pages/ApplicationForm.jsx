@@ -6,7 +6,12 @@ const labelStyle = {
     fontSize: "12px",
   };
 
-  const ApplicationForm = () => {
+  const headingStyle = {
+  fontFamily: "PP Neue Montreal VF, sans-serif", // Add this style for the new font
+  fontSize: "40px", // Set the font size to 40px
+};
+
+const ApplicationForm = () => {
   const toast = useToast();
   const [formData, setFormData] = useState({
     firstName: "",
@@ -70,7 +75,7 @@ const labelStyle = {
         <VStack spacing={8} align="stretch">
           {step === 1 && (
             <Box>
-              <Heading as="h2" size="lg" mb={4}>Hvem er med</Heading>
+              <Heading as="h2" size="lg" mb={4} style={headingStyle}>Hvem er med</Heading> {/* Apply the new style */}
               <VStack spacing={4}>
                 <HStack spacing={4} width="100%">
                   <FormControl id="firstName" isRequired>
@@ -120,7 +125,7 @@ const labelStyle = {
 
           {step === 2 && (
             <Box>
-              <Heading as="h2" size="lg" mb={4}>Prosjektbeskrivelse</Heading>
+              <Heading as="h2" size="lg" mb={4} style={headingStyle}>Prosjektbeskrivelse</Heading> {/* Apply the new style */}
               <VStack spacing={4}>
                 <FormControl id="education" isRequired>
                   <FormLabel style={labelStyle}>Education</FormLabel>
@@ -147,7 +152,7 @@ const labelStyle = {
 
           {step === 3 && (
             <Box>
-              <Heading as="h2" size="lg" mb={4}>Plan og budsjett</Heading>
+              <Heading as="h2" size="lg" mb={4} style={headingStyle}>Plan og budsjett</Heading> {/* Apply the new style */}
               <VStack spacing={4}>
                 <FormControl id="coverLetter" isRequired>
                   <FormLabel style={labelStyle}>Cover Letter</FormLabel>
