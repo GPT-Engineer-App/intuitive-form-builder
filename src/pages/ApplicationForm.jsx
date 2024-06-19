@@ -93,6 +93,27 @@ const ApplicationForm = () => {
                                     <Box>
                                         <Heading as="h2" size="lg" mb={4} style={headingStyle}>Hvem er med</Heading>
                                         <VStack spacing={4}>
+                                            <Box>
+                                                <Heading as="h3" size="md" mb={2}>Prosjektansvarlig organisasjon</Heading>
+                                                <FormControl id="prosjektansvarligOrganisasjon" isRequired>
+                                                    <FormLabel style={labelStyle}>Prosjektansvarlig Organisasjon</FormLabel>
+                                                    <Input name="prosjektansvarligOrganisasjon" value={formData.prosjektansvarligOrganisasjon} onChange={handleChange} />
+                                                </FormControl>
+                                            </Box>
+                                            <Box>
+                                                <Heading as="h3" size="md" mb={2}>Obligatoriske roller</Heading>
+                                                <FormControl id="obligatoriskeRoller" isRequired>
+                                                    <FormLabel style={labelStyle}>Obligatoriske Roller</FormLabel>
+                                                    <Input name="obligatoriskeRoller" value={formData.obligatoriskeRoller} onChange={handleChange} />
+                                                </FormControl>
+                                            </Box>
+                                            <Box>
+                                                <Heading as="h3" size="md" mb={2}>Andre roller</Heading>
+                                                <FormControl id="andreRoller" isRequired>
+                                                    <FormLabel style={labelStyle}>Andre Roller</FormLabel>
+                                                    <Input name="andreRoller" value={formData.andreRoller} onChange={handleChange} />
+                                                </FormControl>
+                                            </Box>
                                             <HStack spacing={4} width="100%">
                                                 <FormControl id="firstName" isRequired>
                                                     <FormLabel style={labelStyle}>First Name</FormLabel>
