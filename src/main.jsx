@@ -1,3 +1,4 @@
+import "@fontsource/ibm-plex-mono";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -11,7 +12,13 @@ const colors = {
   },
 };
 
-const theme = extendTheme({ colors });
+const theme = extendTheme({
+  colors,
+  fonts: {
+    heading: "IBM Plex Mono, sans-serif",
+    body: "IBM Plex Mono, sans-serif",
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
