@@ -89,7 +89,7 @@ const ApplicationForm = () => {
                     <form onSubmit={handleSubmit}>
                         <VStack spacing={8} align="stretch">
                             {step === 1 && (
-                                <Element name="section1">
+                                <Element name="section1" id="section1">
                                     <Box>
                                         <Heading as="h2" size="lg" mb={4} style={headingStyle}>Hvem er med</Heading>
                                         <VStack spacing={4}>
@@ -162,7 +162,7 @@ const ApplicationForm = () => {
                             )}
 
                             {step === 2 && (
-                                <Element name="section2">
+                                <Element name="section2" id="section2">
                                     <Box>
                                         <Heading as="h2" size="lg" mb={4} style={headingStyle}>Prosjektbeskrivelse</Heading>
                                         <VStack spacing={4}>
@@ -191,7 +191,7 @@ const ApplicationForm = () => {
                             )}
 
                             {step === 3 && (
-                                <Element name="section3">
+                                <Element name="section3" id="section3">
                                     <Box>
                                         <Heading as="h2" size="lg" mb={4} style={headingStyle}>Plan og budsjett</Heading>
                                         <VStack spacing={4}>
