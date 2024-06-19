@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link as ScrollLink, Element, scroller } from 'react-scroll';
+
 import { Box, Button, FormControl, FormLabel, Input, VStack, HStack, Textarea, Select, useToast, Heading, Progress, Flex, List, ListItem, Link } from "@chakra-ui/react";
 
 const labelStyle = {
@@ -67,6 +68,15 @@ const ApplicationForm = () => {
         setStep(step - 1);
     };
 
+    const scrollToSection = (section) => {
+        scroller.scrollTo(section, {
+            duration: 500,
+            delay: 0,
+            smooth: 'easeInOutQuart',
+            offset: -50,
+        });
+    };
+
     return (
         <Box p={8} mx="48px">
             <Progress value={(step / 3) * 100} mb={4} />
@@ -75,13 +85,13 @@ const ApplicationForm = () => {
                     <Heading as="h3" size="md" mb={4}>Overview</Heading>
                     <List spacing={3}>
                         <ListItem>
-                            <Link as={ScrollLink} to="section1" smooth={true} duration={500} offset={-50}>Hvem er med</Link>
+                            <Link as={ScrollLink} to="section1" onClick={() => scrollToSection('section1')}>Hvem er med</Link>
                         </ListItem>
                         <ListItem>
-                            <Link as={ScrollLink} to="section2" smooth={true} duration={500} offset={-50}>Prosjektbeskrivelse</Link>
+                            <Link as={ScrollLink} to="section2" onClick={() => scrollToSection('section2')}>Prosjektbeskrivelse</Link>
                         </ListItem>
                         <ListItem>
-                            <Link as={ScrollLink} to="section3" smooth={true} duration={500} offset={-50}>Plan og budsjett</Link>
+                            <Link as={ScrollLink} to="section3" onClick={() => scrollToSection('section3')}>Plan og budsjett</Link>
                         </ListItem>
                     </List>
                 </Box>
