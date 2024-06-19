@@ -1,16 +1,27 @@
 import { useState } from "react";
 import { Link as ScrollLink, Element, scroller } from 'react-scroll';
 
-import { Box, Button, FormControl, FormLabel, Input, VStack, HStack, Textarea, Select, useToast, Heading, Progress, Flex, List, ListItem, Link } from "@chakra-ui/react";
+import { Box, Button, FormControl, FormLabel, Input, VStack, HStack, Textarea, Select, useToast, Heading, Progress, Flex, List, ListItem, Link, RadioGroup, Radio, Stack } from "@chakra-ui/react";
 
 const labelStyle = {
     fontFamily: "IBM Plex Mono, sans-serif",
-    fontSize: "12px",
+    fontSize: "14px",
+    fontWeight: "bold",
+    color: "#333",
 };
 
 const headingStyle = {
     fontFamily: "PP Neue Montreal VF, sans-serif",
-    fontSize: "40px",
+    fontSize: "24px",
+    fontWeight: "bold",
+    color: "#333",
+};
+
+const subHeadingStyle = {
+    fontFamily: "PP Neue Montreal VF, sans-serif",
+    fontSize: "20px",
+    fontWeight: "bold",
+    color: "#333",
 };
 
 const ApplicationForm = () => {
@@ -82,7 +93,7 @@ const ApplicationForm = () => {
             <Progress value={(step / 3) * 100} mb={4} />
             <Box display="flex">
                 <Box width="20%" p={4} borderRight="1px solid #e2e8f0">
-                    <Heading as="h3" size="md" mb={4}>Overview</Heading>
+                    <Heading as="h3" size="md" mb={4} style={headingStyle}>Overview</Heading>
                     <List spacing={3}>
                         <ListItem>
                             <Link as={ScrollLink} to="section1" onClick={() => scrollToSection('section1')}>Hvem er med</Link>
@@ -104,21 +115,21 @@ const ApplicationForm = () => {
                                         <Heading as="h2" size="lg" mb={4} style={headingStyle}>Hvem er med</Heading>
                                         <VStack spacing={4}>
                                             <Box>
-                                                <Heading as="h3" size="md" mb={2}>Prosjektansvarlig organisasjon</Heading>
+                                                <Heading as="h3" size="md" mb={2} style={subHeadingStyle}>Prosjektansvarlig organisasjon</Heading>
                                                 <FormControl id="prosjektansvarligOrganisasjon" isRequired>
                                                     <FormLabel style={labelStyle}>Prosjektansvarlig Organisasjon</FormLabel>
                                                     <Input name="prosjektansvarligOrganisasjon" value={formData.prosjektansvarligOrganisasjon} onChange={handleChange} />
                                                 </FormControl>
                                             </Box>
                                             <Box>
-                                                <Heading as="h3" size="md" mb={2}>Obligatoriske roller</Heading>
+                                                <Heading as="h3" size="md" mb={2} style={subHeadingStyle}>Obligatoriske roller</Heading>
                                                 <FormControl id="obligatoriskeRoller" isRequired>
                                                     <FormLabel style={labelStyle}>Obligatoriske Roller</FormLabel>
                                                     <Input name="obligatoriskeRoller" value={formData.obligatoriskeRoller} onChange={handleChange} />
                                                 </FormControl>
                                             </Box>
                                             <Box>
-                                                <Heading as="h3" size="md" mb={2}>Andre roller</Heading>
+                                                <Heading as="h3" size="md" mb={2} style={subHeadingStyle}>Andre roller</Heading>
                                                 <FormControl id="andreRoller" isRequired>
                                                     <FormLabel style={labelStyle}>Andre Roller</FormLabel>
                                                     <Input name="andreRoller" value={formData.andreRoller} onChange={handleChange} />
