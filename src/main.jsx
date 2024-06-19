@@ -1,4 +1,5 @@
 import "@fontsource/ibm-plex-mono";
+import "@fontsource/pp-neue-montreal-vf";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
@@ -15,7 +16,7 @@ const colors = {
 const theme = extendTheme({
   colors,
   fonts: {
-    heading: "IBM Plex Mono, sans-serif",
+    heading: "PP Neue Montreal VF, sans-serif",
     body: "IBM Plex Mono, sans-serif",
   },
 });

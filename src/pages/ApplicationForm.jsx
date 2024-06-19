@@ -70,7 +70,7 @@ const labelStyle = {
         <VStack spacing={8} align="stretch">
           {step === 1 && (
             <Box>
-              <Heading as="h2" size="lg" mb={4}>Hvem er med</Heading>
+              <Heading as="h2" size="lg" mb={4} fontSize="40px">Hvem er med</Heading>
               <VStack spacing={4}>
                 <HStack spacing={4} width="100%">
                   <FormControl id="firstName" isRequired>
@@ -120,7 +120,7 @@ const labelStyle = {
 
           {step === 2 && (
             <Box>
-              <Heading as="h2" size="lg" mb={4}>Prosjektbeskrivelse</Heading>
+              <Heading as="h2" size="lg" mb={4} fontSize="40px">Prosjektbeskrivelse</Heading>
               <VStack spacing={4}>
                 <FormControl id="education" isRequired>
                   <FormLabel style={labelStyle}>Education</FormLabel>
@@ -147,7 +147,7 @@ const labelStyle = {
 
           {step === 3 && (
             <Box>
-              <Heading as="h2" size="lg" mb={4}>Plan og budsjett</Heading>
+              <Heading as="h2" size="lg" mb={4} fontSize="40px">Plan og budsjett</Heading>
               <VStack spacing={4}>
                 <FormControl id="coverLetter" isRequired>
                   <FormLabel style={labelStyle}>Cover Letter</FormLabel>
