@@ -6,21 +6,21 @@ import { Box, Button, FormControl, FormLabel, Input, VStack, HStack, Textarea, S
 const labelStyle = {
     fontFamily: "IBM Plex Mono, sans-serif",
     fontSize: "14px",
-    fontWeight: "bold",
+    fontWeight: "regular",
     color: "#333",
 };
 
 const headingStyle = {
     fontFamily: "PP Neue Montreal VF, sans-serif",
     fontSize: "24px",
-    fontWeight: "bold",
+    fontWeight: "regular",
     color: "#333",
 };
 
 const subHeadingStyle = {
     fontFamily: "PP Neue Montreal VF, sans-serif",
     fontSize: "20px",
-    fontWeight: "bold",
+    fontWeight: "regular",
     color: "#333",
 };
 
