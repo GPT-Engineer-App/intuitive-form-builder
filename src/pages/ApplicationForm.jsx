@@ -57,6 +57,11 @@ const ApplicationForm = () => {
             duration: 5000,
             isClosable: true,
         });
+        scroller.scrollTo('section1', {
+            duration: 800,
+            delay: 0,
+            smooth: 'easeInOutQuart'
+        });
     };
 
     const nextStep = () => {
