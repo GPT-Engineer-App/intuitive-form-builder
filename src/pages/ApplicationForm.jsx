@@ -68,7 +68,7 @@ const ApplicationForm = () => {
     };
 
     return (
-        <Box p={8} maxWidth="800px" mx="auto">
+        <Box p={8} mx="48px">
             <Progress value={(step / 3) * 100} mb={4} />
             <Box display="flex">
                 <Box width="20%" p={4} borderRight="1px solid #e2e8f0">
